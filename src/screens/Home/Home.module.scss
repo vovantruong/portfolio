@@ -1,0 +1,9 @@
+@import '../../styles/helper';
+
+h1{
+    color: var(--color-green);
+
+    @include mobile{
+        color: var(--color-red);
+    }
+}

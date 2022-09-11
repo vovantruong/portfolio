@@ -1,0 +1,11 @@
+body{
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background .2s, color .2s;
+}
+
+body.dark-mode{
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    transition: background .2s, color .2s;
+}

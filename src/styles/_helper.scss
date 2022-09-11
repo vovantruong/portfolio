@@ -1,0 +1,44 @@
+@mixin sm-mobile {
+	@media only screen and (max-width: 479px) {
+		@content;
+	}
+}
+
+@mixin md-mobile {
+	@media only screen and (max-width: 639px) {
+		@content;
+	}
+}
+
+// Mobile
+@mixin mobile {
+	@media only screen and (max-width: 739px) {
+		@content;
+	}
+}
+
+//Tablet
+@mixin tablet {
+	@media only screen and (min-width: 740px) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+//PC
+@mixin desktop {
+	@media only screen and (max-width: 1179px) {
+		@content;
+	}
+}
+
+@mixin lg-desktop {
+	@media only screen and (min-width: 1180px) {
+		@content;
+	}
+}
+
+@mixin dark {
+	@at-root :global(.dark-mode) & {
+		@content;
+	}
+}
