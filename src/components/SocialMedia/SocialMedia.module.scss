@@ -1,0 +1,121 @@
+@import '../../styles/helper';
+.social-media{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+    gap: 1.5rem;
+    @include tablet{
+        top: 30px;
+        left: 30px;
+        bottom: unset;
+    }
+    @include mobile{
+        top: unset;
+        left: 16px;
+        bottom: 130px;
+    }
+}
+
+.social-item{
+    position: relative;
+    background: var(--bg-light);
+    box-shadow: var(--shadow-light);
+    border-radius: 5px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s linear;
+    animation: tranlateAnimate 1s forwards;
+    transform: translateX(-100px);
+    &:hover{
+        box-shadow: var(--shadow-inset-light-sm);
+        svg{
+            transform: scale(0.8);
+        }
+    }
+
+    @include dark{
+        box-shadow: var(--shadow-dark);
+        background: var(--bg-dark-linear);
+        &:hover{
+            box-shadow: var(--shadow-inset-dark-sm);
+        }
+    }
+
+    svg{
+        width: 55%;
+        height: 55%;
+        color: var(--color-main);
+    }
+
+    @include mobile{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.btn-toggle{
+    position: fixed;
+    bottom: 330px;
+    left: 0;
+    width: 45px;
+    height: 35px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: var(--bg-light);
+    box-shadow: var(--shadow-light);
+    transition: all .2s;
+
+    svg{
+        width: 55%;
+        height: 55%;
+        color: var(--color-main)
+    }
+
+    @include dark{
+        box-shadow: var(--shadow-dark);
+        background: var(--bg-linear-dark);
+    }
+
+    &:active{
+        width: 70px
+    }
+}
+
+.hidden{
+    width: 0;
+    animation: show .5s 2s forwards;
+}
+
+@keyframes tranlateAnimate{
+    0%{
+        transform: translateX(-100px);
+    }
+    30%{
+        transform: translateX(20px) rotateZ(30deg);
+    }
+    60%{
+        transform: translateX(-15px) rotate(-10deg);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes show{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 71px;
+    }
+    100%{
+        width: 51px;
+    }
+}

@@ -41,12 +41,12 @@
             content: '';
             left: 0;
             bottom: 0;
-            background: $color-main;
+            background: var(--color-main);
             width: 0%;
             height: 2px;
         }
         &:hover{
-            color: $color-main;
+            color: var(--color-main);
             &::before{
                 width: 100%;
             }

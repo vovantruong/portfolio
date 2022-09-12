@@ -1,0 +1,12 @@
+.change-color{
+    display: flex;
+    align-content: center;
+    justify-content: center; 
+    gap: 2rem;
+
+    button{
+        width: 55px; 
+        height: 55px;
+        border-radius: 50%; 
+    }
+}
