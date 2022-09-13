@@ -9,3 +9,27 @@ body.dark-mode{
     color: var(--text-dark);
     transition: background .2s, color .2s;
 }
+
+.theme-color-red{
+    --color-main: #ff014f;
+}
+
+
+.theme-color-organe{
+    --color-main: var(--color-organe)
+}
+
+
+.theme-color-green{
+    --color-main: var(--color-green)
+}
+
+
+.theme-color-blue{
+    --color-main: var(--color-blue)
+}
+
+
+.theme-color-pink{
+    --color-main: var(--color-pink)
+}

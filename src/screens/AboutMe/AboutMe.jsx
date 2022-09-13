@@ -9,7 +9,7 @@ const AboutMe = () => {
   return(
     <div className={cx('about')}>
        about
-       <ChangeColor />
+       {/* <ChangeColor /> */}
     </div>
   )
 }

@@ -1,6 +1,9 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ScrollingProvider, Section } from "react-scroll-section";
 import DefaultLayout from "./layout/DefaultLayout";
+import ThemeAction from './services/ThemeAction';
 
 import AboutMe from "./screens/AboutMe/AboutMe";
 import Contact from "./screens/Contact/Contact";
@@ -40,10 +43,21 @@ function App() {
     localStorage.setItem("dark-mode-enabled", true);
   }
 
+  const dispatch = useDispatch()
+
+  const themeReducer = useSelector(state => state.ThemeReducer)
+
+  useEffect(() => {
+    const colorClass = localStorage.getItem('colorMode', 'theme-mode-light')
+
+    dispatch(ThemeAction.setColor(colorClass))
+
+  },[dispatch])
+
   return (
     <BrowserRouter>
     <ScrollingProvider scrollBehavior="smooth">
-      <div className="App">
+      <div className={`App ${themeReducer.color}`}>
         <Routes>
           <Route
             path="/"

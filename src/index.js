@@ -7,6 +7,9 @@ import { MediaProvider } from './context/MediaQueryContext'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import GlobalStyle from './styles/GlobalStyles'
+import { Provider } from 'react-redux'
+import { createStore } from 'redux'
+import rootReducer from './services'
 
 AOS.init({
 	duration: 600,
@@ -14,14 +17,20 @@ AOS.init({
 	delay: 100,
 })
 
+const store = createStore(
+    rootReducer
+)
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<React.StrictMode>
+	<Provider store={store}>
 		<MediaProvider>
 			<GlobalStyle>
 				<App />
 			</GlobalStyle>
 		</MediaProvider>
+	</Provider>
 	</React.StrictMode>
 )
 

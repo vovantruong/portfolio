@@ -147,6 +147,9 @@
         cursor: pointer;
         color: var(--text-light);
         transition: all .3s;
+        @include dark{
+            color: var(--text-dark);
+        }
         &::before{
             position: absolute;
             left: 0;
