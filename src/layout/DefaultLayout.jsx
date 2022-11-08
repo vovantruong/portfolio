@@ -15,7 +15,8 @@ const DefaultLayout = ({ children }) => {
 	return (
 		<div className={cx('default-layout')}>
 			<Header />
-			{!breakpoint.mobile && <ToggleThemes />}
+			{/* {!breakpoint.mobile && <ToggleThemes />} */}
+			<ToggleThemes />
 			<SocialMedia />
 			<div className={cx('wrapper')}>{children}</div>
 			<div className="container">

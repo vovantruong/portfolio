@@ -7,7 +7,7 @@ const cx = classNames.bind(styles)
 const Portfolio = () => {
   return(
     <div className={cx('portfolio')}>
-        Portfolio
+        Updating...
     </div>
   )
 }

@@ -7,7 +7,7 @@ const cx = classNames.bind(styles)
 const AboutMe = () => {
   return(
     <div className={cx('about')}>
-       about
+      Updating...
     </div>
   )
 }

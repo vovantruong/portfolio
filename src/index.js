@@ -17,20 +17,18 @@ AOS.init({
 	delay: 100,
 })
 
-const store = createStore(
-    rootReducer
-)
+const store = createStore(rootReducer)
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<React.StrictMode>
-	<Provider store={store}>
-		<MediaProvider>
-			<GlobalStyle>
-				<App />
-			</GlobalStyle>
-		</MediaProvider>
-	</Provider>
+		<Provider store={store}>
+			<MediaProvider>
+				<GlobalStyle>
+					<App />
+				</GlobalStyle>
+			</MediaProvider>
+		</Provider>
 	</React.StrictMode>
 )
 
