@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ScrollingProvider, Section } from 'react-scroll-section'
@@ -12,6 +12,7 @@ import Portfolio from './screens/Portfolio/Portfolio'
 import Resume from './screens/Resume/Resume'
 import Blog from './screens/Blog/Blog'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import { MediaQueryContext } from './context/MediaQueryContext'
 
 const dataScreen = [
 	{
@@ -41,6 +42,9 @@ const dataScreen = [
 ]
 
 function App() {
+
+	const breakpoint = useContext(MediaQueryContext);
+
 	const darkmode = JSON.parse(localStorage.getItem('dark-mode-enabled')) ? true : false
 	if (darkmode) {
 		localStorage.setItem('dark-mode-enabled', true)
@@ -52,14 +56,18 @@ function App() {
 
 	useEffect(() => {
 		const colorClass = localStorage.getItem('colorMode', 'theme-mode-light')
-
 		dispatch(ThemeAction.setColor(colorClass))
 	}, [dispatch])
+
+	useEffect(() => {	
+		window.document.body.ariaCurrent = themeReducer.color
+	}, [themeReducer, dispatch])
 
 	return (
 		<BrowserRouter>
 			<ScrollingProvider scrollBehavior="smooth">
-				<div className={`App ${themeReducer.color ?? ''}`}>
+				{/* <div className={`App ${themeReducer.color ?? ''}`}> */}
+				<div className="App">
 					<Routes>
 						<Route
 							path="/"
@@ -76,7 +84,7 @@ function App() {
 					</Routes>
 				</div>
 			</ScrollingProvider>
-            <ScrollToTop />
+			<ScrollToTop />
 		</BrowserRouter>
 	)
 }

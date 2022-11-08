@@ -105,6 +105,15 @@
     color: var(--color-main);
 }
 
+.intro__title-caption{
+
+    // @include mobile{
+    //     display: block;
+    //     text-align: left;
+    //     padding-left: 20px;
+    // }
+}
+
 .avatar{
     width: 40%;
     padding: 1rem;

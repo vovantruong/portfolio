@@ -10,26 +10,22 @@ body.dark-mode{
     transition: background .2s, color .2s;
 }
 
-.theme-color-red{
+body[aria-current="theme-color-red"]{
     --color-main: #ff014f;
 }
 
-
-.theme-color-organe{
+body[aria-current="theme-color-organe"]{
     --color-main: var(--color-organe)
 }
 
-
-.theme-color-green{
+body[aria-current="theme-color-green"]{
     --color-main: var(--color-green)
 }
 
-
-.theme-color-blue{
+body[aria-current="theme-color-blue"]{
     --color-main: var(--color-blue)
 }
 
-
-.theme-color-pink{
-    --color-main: var(--color-pink)
+body[aria-current="theme-color-pink"]{
+    --color-main: var(--color-pink);
 }

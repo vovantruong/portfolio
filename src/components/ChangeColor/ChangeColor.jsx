@@ -18,7 +18,7 @@ const color_settings = [
 		id: 'organe',
 		name: 'Organe',
 		background: 'organe-color',
-		color: '#fa5b0f',
+		color: '#FD841F',
 		class: 'theme-color-organe',
 	},
 	{
@@ -39,7 +39,7 @@ const color_settings = [
 		id: 'pink',
 		name: 'Pink',
 		background: 'pink-color',
-		color: '#f021b2',
+		color: '#FF577F',
 		class: 'theme-color-pink',
 	},
 ]
@@ -62,7 +62,7 @@ const ChangeColor = () => {
 					aria-label="Hello"
 					key={i}
 					onClick={() => handleSetColor(color)}
-					className={cx({ active: color.class === currentColor })}
+					className={cx(color.class,{ active: color.class === currentColor })}
 					style={{ background: color.color }}
 				>
 					{currentColor === color.class && <BsCheckLg />}
