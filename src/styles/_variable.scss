@@ -28,7 +28,7 @@
 	--text-light-2: #8f8bc7;
 	--text-light-3: #504e70;
 	--bg-dark: #212428;
-	--bg-dark-2: #191b1e;
+	--bg-dark-2: #272c33;
 	--bg-dark-3: #222222;
 	--bg-dark-linear: linear-gradient(145deg, #1e2024, #23272b);
 	--bg-dark-linear-180deg: linear-gradient(315deg, #1e2024, #23272b);
@@ -39,6 +39,7 @@
 
     /* ====================== BOX SHADOW ==================== */
     --shadow-dark: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+    --shadow-dark-10: 7px 7px 10px #0e1116, -8px -7px 10px #2d3135;
     --shadow-inset-dark: inset -5px -5px 10px #2d3135, inset 2px 2px 5px #111316, inset 2px 2px 15px #111316;
     --shadow-inset-dark-10: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
     --shadow-light: -3px -3px 15px #ffffff, 5px 5px 7px #ceced1, 15px 15px 15px #ceced1;

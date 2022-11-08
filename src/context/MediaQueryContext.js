@@ -5,10 +5,18 @@ const MediaQueryContext = createContext();
 
 function MediaProvider ({children}) {
 
-    const isMobile = useMediaQuery({query: `(max-width: 739px)`});
+    const isDesktop = useMediaQuery({ query: `(max-width: 1179px)` })
+	const isTablet = useMediaQuery({ query: `(max-width: 1023px)` })
+	const isMobile = useMediaQuery({ query: `(max-width: 739px)` })
+
+	const breakpoint = {
+		desktop: isDesktop,
+		tablet: isTablet,
+		mobile: isMobile
+	}
 
     return(
-        <MediaQueryContext.Provider value={isMobile}>
+        <MediaQueryContext.Provider value={breakpoint}>
             {children}
         </MediaQueryContext.Provider>
     )

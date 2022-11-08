@@ -23,8 +23,8 @@ const Home = () => {
 					<div className={cx('intro')} data-aos="fade-right">
 						<p className={cx('intro__welcome')}>WELCOME TO MY WORLD</p>
 						<h4 className={cx('intro__title')}>
-							<span className={cx('intro__title-hi')}>Hi, I'm&nbsp;</span>
-							<span className={cx('intro__title-name')}>Gavin Vo</span>
+							<p className={cx('intro__title-hi')}>Hi, I'm&nbsp;</p>
+							<p className={cx('intro__title-name')}>Truong</p>
 							<br />
 							<span className={cx('intro__title-caption')}>
 								a&nbsp;

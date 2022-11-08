@@ -1,12 +1,26 @@
+@import '../../styles/helper';
+
 .change-color{
     display: flex;
     align-content: center;
-    justify-content: center; 
-    gap: 2rem;
+    justify-content: space-between; 
+    width: 100%;
 
     button{
-        width: 55px; 
-        height: 55px;
-        border-radius: 50%; 
+        width: 35px; 
+        height: 35px;
+        border-radius: 50%;
+        box-shadow: var(--shadow-light-10); 
+
+        @include dark{
+            box-shadow: var(--shadow-dark-10); 
+        }
+    }
+}
+
+.active{
+    svg{
+        color: #fff;
+        font-size: 14px;
     }
 }

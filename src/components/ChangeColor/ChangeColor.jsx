@@ -3,6 +3,7 @@ import classNames from 'classnames/bind'
 import styles from './ChangeColor.module.scss'
 import { useDispatch } from 'react-redux'
 import ThemeAction from '../../services/ThemeAction'
+import { BsCheckLg } from 'react-icons/bs'
 
 const cx = classNames.bind(styles)
 const color_settings = [
@@ -44,12 +45,12 @@ const color_settings = [
 ]
 
 const ChangeColor = () => {
-	const [currentColor, setCurrentColor] = useState('red')
+	const [currentColor, setCurrentColor] = useState(localStorage.getItem('colorMode') ?? 'theme-color-red')
 
 	const dispatch = useDispatch()
 
 	const handleSetColor = (color) => {
-		setCurrentColor(color.id)
+		setCurrentColor(color.class)
 		localStorage.setItem('colorMode', color.class)
 		dispatch(ThemeAction.setColor(color.class))
 	}
@@ -61,9 +62,11 @@ const ChangeColor = () => {
 					aria-label="Hello"
 					key={i}
 					onClick={() => handleSetColor(color)}
-          className={cx({"active": color.id === currentColor})}
+					className={cx({ active: color.class === currentColor })}
 					style={{ background: color.color }}
-				></button>
+				>
+					{currentColor === color.class && <BsCheckLg />}
+				</button>
 			))}
 		</div>
 	)

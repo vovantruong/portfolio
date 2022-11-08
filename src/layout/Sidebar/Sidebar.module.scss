@@ -1,0 +1,126 @@
+@import '../../styles/helper';
+
+.sidebar-area > div:nth-child(3){
+    background: none;
+    width: 70%;
+}
+
+.wrap-side{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-light);
+    color: var(--text-light);
+    padding: 30px 20px;
+
+    @include dark{
+        background: var(--bg-dark);
+        color: var(--text-dark);
+    }
+}
+
+.wrap-head {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.wrap-head__logo {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow-light-10);
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+    @include dark{
+        box-shadow: var(--shadow-dark-10);
+    }
+}
+
+.wrap-head__title{
+    font-family: 'Teko',sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0;
+	color: var(--color-main);
+	font-size: 22px;
+    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--shadow-light-10);
+
+    @include dark{
+        box-shadow: var(--shadow-dark-10);
+    }
+}
+
+.space{
+    margin: 20px 0;
+    border: none;
+    width: 100%;
+    height: 5px;
+    box-shadow: var(--shadow-inset-light-sm);
+
+    @include dark{
+        box-shadow: var(--shadow-inset-dark-sm);
+    }
+}
+
+.nav-menu__item{
+    position: relative;
+    padding: 15px 5px;
+}
+
+.nav-active{
+    color: var(--color-main);
+    transition: all .3s;
+
+    &::before{
+        position: absolute;
+		content: '';
+		left: 0;
+		bottom: 0px;
+		width: 100%;
+		height: 2px;
+        transform-origin: left;
+        transition: all .5s;
+		background: var(--color-main);
+        animation: line .6s forwards linear;
+    }
+}
+
+@keyframes line {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+.wrap-sidebar__title{
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 1px;
+    display: block;
+	font-weight: 500;
+	font-size: 26px;
+	padding-bottom: 15px;
+	position: relative;
+	z-index: 1;
+}

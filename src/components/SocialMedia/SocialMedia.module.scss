@@ -8,15 +8,11 @@
     flex-direction: column;
     z-index: 1000;
     gap: 1.5rem;
-    @include tablet{
-        top: 30px;
-        left: 30px;
-        bottom: unset;
-    }
+
     @include mobile{
         top: unset;
         left: 16px;
-        bottom: 130px;
+        bottom: 45px;
     }
 }
 
@@ -62,7 +58,8 @@
 
 .btn-toggle{
     position: fixed;
-    bottom: 330px;
+    bottom: 250px;
+    // bottom: 330px;
     left: 0;
     width: 45px;
     height: 35px;
@@ -80,7 +77,7 @@
 
     @include dark{
         box-shadow: var(--shadow-dark);
-        background: var(--bg-linear-dark);
+        background: var(--bg-dark-linear);
     }
 
     &:active{

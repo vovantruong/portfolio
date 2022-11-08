@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames/bind'
-import styles from './Skill.module.scss'
+import styles from './Blog.module.scss'
 
 const cx = classNames.bind(styles)
 
-const Skill = () => {
+const Blog = () => {
   return(
-    <div className={cx('skill')}>
-        Skill
+    <div className={cx('blog')}>
+        Blog
     </div>
   )
 }
-export default Skill
+export default Blog
