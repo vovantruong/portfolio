@@ -63,8 +63,10 @@ function App() {
 		window.document.body.ariaCurrent = themeReducer.color
 	}, [themeReducer, dispatch])
 
+	const basename = process.env.NODE_ENV === 'development' ? '/' : '/portfolio'
+
 	return (
-		<BrowserRouter>
+		<BrowserRouter basename={basename}>
 			<ScrollingProvider scrollBehavior="smooth">
 				<div className="App">
 					<Routes>

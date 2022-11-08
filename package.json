@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://vovantruong.github.io/portfolio/",
+  "private": false,
+  "homepage": "./",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.10.5",

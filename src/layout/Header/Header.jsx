@@ -86,12 +86,6 @@ const Header = () => {
 					{!breakpoint.mobile && renderNavbar()}
 					{breakpoint.mobile && (
 						<React.Fragment>
-							{/* <div className={cx('nav-mb')}>
-								<div className={cx('wrap-img__mb')}>
-									<img src={require('../../assets/image/avt-gavin.png')} alt=''/>
-								</div>
-								<h2 className={cx('nav-mb__title')}>GAVIN</h2>
-							</div> */}
 							<button className={cx('toggle-sidebar')} onClick={() => setVisible(true)}>
 								<IoIosMenu />
 							</button>
