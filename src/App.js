@@ -66,7 +66,6 @@ function App() {
 	return (
 		<BrowserRouter>
 			<ScrollingProvider scrollBehavior="smooth">
-				{/* <div className={`App ${themeReducer.color ?? ''}`}> */}
 				<div className="App">
 					<Routes>
 						<Route
