@@ -2,7 +2,11 @@
 
 .sidebar-area > div:nth-child(3){
     background: none;
-    width: 70%;
+    width: 40%;
+
+    @include mobile{
+        width: 70%;
+    }
 }
 
 .wrap-side{

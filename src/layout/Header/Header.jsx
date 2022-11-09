@@ -9,7 +9,9 @@ import { HiHome } from 'react-icons/hi'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { BsTelephoneFill } from 'react-icons/bs'
 import { ImProfile,ImBlog } from 'react-icons/im'
-import { FaUserFriends } from 'react-icons/fa'
+import { FaUserFriends, FaLightbulb } from 'react-icons/fa'
+import { MdOutlineCastForEducation } from 'react-icons/md'
+import { GiSoapExperiment } from 'react-icons/gi'
 
 const cx = classNames.bind(styles)
 
@@ -20,19 +22,29 @@ const dataItem = [
 		icon: <HiHome />
 	},
 	{
-		id: 'portfolio',
-		name: 'Portfolio',
-		icon: <AiOutlineFundProjectionScreen />
-	},
-	{
 		id: 'about',
 		name: 'About',
 		icon: <FaUserFriends />
 	},
 	{
-		id: 'resume',
-		name: 'Resume',
-		icon: <ImProfile />
+		id: 'services',
+		name: 'Services',
+		icon: <AiOutlineFundProjectionScreen />
+	},
+	{
+		id: 'skills',
+		name: 'Skills',
+		icon: <FaLightbulb />
+	},
+	{
+		id: 'education',
+		name: 'Education',
+		icon: <MdOutlineCastForEducation />
+	},
+	{
+		id: 'experience',
+		name: 'Experience',
+		icon: <GiSoapExperiment />
 	},
 	{
 		id: 'blog',
@@ -93,8 +105,8 @@ const Header = () => {
 			<div className={cx('wrap-head', { 'sticky-header': scroll && !breakpoint.mobile })}>
 				<div className="container">
 					<nav className={cx('navbar')}>
-						{!breakpoint.mobile && renderNavbar()}
-						{breakpoint.mobile && (
+						{!breakpoint.tablet && renderNavbar()}
+						{breakpoint.tablet && (
 							<React.Fragment>
 								<button className={cx('toggle-sidebar')} onClick={() => setVisible(true)}>
 									<IoIosMenu />

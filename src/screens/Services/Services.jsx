@@ -1,14 +1,14 @@
 import React from 'react'
 import classNames from 'classnames/bind'
-import styles from './Portfolio.module.scss'
+import styles from './Services.module.scss'
 
 const cx = classNames.bind(styles)
 
-const Portfolio = () => {
+const Services = () => {
   return(
-    <div className={cx('portfolio')}>
+    <div className={cx('services')}>
         Updating...
     </div>
   )
 }
-export default Portfolio
+export default Services

@@ -8,11 +8,13 @@ import ThemeAction from './services/ThemeAction'
 import AboutMe from './screens/AboutMe/AboutMe'
 import Contact from './screens/Contact/Contact'
 import Home from './screens/Home/Home'
-import Portfolio from './screens/Portfolio/Portfolio'
-import Resume from './screens/Resume/Resume'
+import Services from './screens/Services/Services'
+import Skills from './screens/Skills/Skills'
 import Blog from './screens/Blog/Blog'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import { MediaQueryContext } from './context/MediaQueryContext'
+import Education from './screens/Education/Education'
+import Experience from './screens/Experience/Experience'
 
 const dataScreen = [
 	{
@@ -20,16 +22,24 @@ const dataScreen = [
 		component: <Home />,
 	},
 	{
-		id: 'portfolio',
-		component: <Portfolio />,
-	},
-	{
 		id: 'about',
 		component: <AboutMe />,
 	},
 	{
-		id: 'resume',
-		component: <Resume />,
+		id: 'services',
+		component: <Services />,
+	},
+	{
+		id: 'skills',
+		component: <Skills />,
+	},
+	{
+		id: 'education',
+		component: <Education />,
+	},
+	{
+		id: 'experience',
+		component: <Experience />,
 	},
 	{
 		id: 'blog',
