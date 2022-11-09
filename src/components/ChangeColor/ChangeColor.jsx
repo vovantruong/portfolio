@@ -44,7 +44,7 @@ const color_settings = [
 	},
 ]
 
-const ChangeColor = () => {
+const ChangeColor = ({classNames}) => {
 	const [currentColor, setCurrentColor] = useState(localStorage.getItem('colorMode') ?? 'theme-color-red')
 
 	const dispatch = useDispatch()
@@ -56,7 +56,7 @@ const ChangeColor = () => {
 	}
 
 	return (
-		<div className={cx('change-color')}>
+		<div className={cx('change-color',classNames)}>
 			{color_settings.map((color, i) => (
 				<button
 					aria-label="Hello"

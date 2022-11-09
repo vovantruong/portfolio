@@ -7,29 +7,7 @@ import { BiLeftIndent } from 'react-icons/bi'
 import { BsInstagram } from 'react-icons/bs'
 import { MediaQueryContext } from '../../context/MediaQueryContext'
 import { useState } from 'react'
-
-const dataSocial = [
-	{
-		name: 'fb',
-		icon: <FaFacebook />,
-		link: 'https://www.facebook.com/vvtruong.1007',
-	},
-	{
-		name: 'ins',
-		icon: <BsInstagram />,
-		link: 'https://www.instagram.com/vvtruong1007/',
-	},
-	{
-		name: 'git',
-		icon: <FaGithub />,
-		link: 'https://www.github.com/vovantruong',
-	},
-	{
-		name: 'linkin',
-		icon: <FaLinkedinIn />,
-		link: 'https://www.linkedin.com/in/vo-van-truong-b94157214/',
-	},
-]
+import { dataSocialMedia } from '~/mock/dataSocialMedia'
 
 const cx = classNames.bind(styles)
 
@@ -40,7 +18,7 @@ const SocialMedia = () => {
 	function renderSocialDesktop() {
 		return (
 			<React.Fragment>
-				{dataSocial.map((item, i) => (
+				{dataSocialMedia.map((item, i) => (
 					<a
 						style={{ animationDelay: `${i / 4}s` }}
 						className={cx('social-item', item.name)}
@@ -61,7 +39,7 @@ const SocialMedia = () => {
 					{!toggle ? <IoShareSocial /> : <BiLeftIndent />}
 				</button>
 				{toggle &&
-					dataSocial.map((item, i) => (
+					dataSocialMedia.map((item, i) => (
 						<a
 							style={{ animationDelay: `${i / 4}s` }}
 							className={cx('social-item', item.name)}
