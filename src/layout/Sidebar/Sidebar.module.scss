@@ -63,6 +63,12 @@
     display: flex;
     align-items: center;
 
+    .nav-title{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
     svg{
         font-size: 18px;
         margin-right: 10px;

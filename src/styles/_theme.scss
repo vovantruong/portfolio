@@ -29,3 +29,11 @@ body[aria-current="theme-color-blue"]{
 body[aria-current="theme-color-pink"]{
     --color-main: var(--color-pink);
 }
+
+.section-screen{
+    padding-top: 80px;
+}
+
+.section-screen#home{
+    padding: 0;
+}

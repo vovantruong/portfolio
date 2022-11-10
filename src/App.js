@@ -85,7 +85,7 @@ function App() {
 							element={
 								<DefaultLayout>
 									{dataScreen.map((child, id) => (
-										<Section key={id} id={child.id}>
+										<Section key={id} id={child.id} className='section-screen'>
 											{child.component}
 										</Section>
 									))}

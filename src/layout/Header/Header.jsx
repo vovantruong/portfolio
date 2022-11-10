@@ -8,10 +8,14 @@ import Sidebar from '../Sidebar/Sidebar'
 import { HiHome } from 'react-icons/hi'
 import { AiOutlineFundProjectionScreen } from 'react-icons/ai'
 import { BsTelephoneFill } from 'react-icons/bs'
-import { ImProfile,ImBlog } from 'react-icons/im'
+import { ImProfile, ImBlog } from 'react-icons/im'
 import { FaUserFriends, FaLightbulb } from 'react-icons/fa'
 import { MdOutlineCastForEducation } from 'react-icons/md'
 import { GiSoapExperiment } from 'react-icons/gi'
+import ToggleThemes from '~/components/ToggleThemes/ToggleThemes'
+import OutsideClickHandler from 'react-outside-click-handler'
+import { IoSettingsOutline } from 'react-icons/io5'
+import ChangeColor from '~/components/ChangeColor/ChangeColor'
 
 const cx = classNames.bind(styles)
 
@@ -19,42 +23,42 @@ const dataItem = [
 	{
 		id: 'home',
 		name: 'Home',
-		icon: <HiHome />
+		icon: <HiHome />,
 	},
 	{
 		id: 'about',
 		name: 'About',
-		icon: <FaUserFriends />
+		icon: <FaUserFriends />,
 	},
 	{
 		id: 'services',
 		name: 'Services',
-		icon: <AiOutlineFundProjectionScreen />
+		icon: <AiOutlineFundProjectionScreen />,
 	},
 	{
 		id: 'skills',
 		name: 'Skills',
-		icon: <FaLightbulb />
+		icon: <FaLightbulb />,
 	},
 	{
 		id: 'education',
 		name: 'Education',
-		icon: <MdOutlineCastForEducation />
+		icon: <MdOutlineCastForEducation />,
 	},
 	{
 		id: 'experience',
 		name: 'Experience',
-		icon: <GiSoapExperiment />
+		icon: <GiSoapExperiment />,
 	},
 	{
 		id: 'blog',
 		name: 'Blog',
-		icon: <ImBlog />
+		icon: <ImBlog />,
 	},
 	{
 		id: 'contact',
 		name: 'Contact',
-		icon: <BsTelephoneFill />
+		icon: <BsTelephoneFill />,
 	},
 ]
 
@@ -73,6 +77,7 @@ export const NavItem = ({ id = '', className, children, style }) => {
 
 const Header = () => {
 	const [scroll, setScroll] = useState(false)
+	const [visiblePopup, setVisiblePopup] = useState(false)
 	const [visible, setVisible] = useState(false)
 	const breakpoint = useContext(MediaQueryContext)
 
@@ -100,12 +105,30 @@ const Header = () => {
 		)
 	}
 
+	function renderSettingColor() {
+		return (
+			<OutsideClickHandler onOutsideClick={() => setVisiblePopup(false)}>
+				<div className={cx('wrap-setting')}>
+					<button className={cx('toggle-setting')} onClick={() => setVisiblePopup(!visiblePopup)}>
+						<IoSettingsOutline />
+					</button>
+					<div className={cx('wrap-popup', { 'show-wrap__popup': visiblePopup })}>
+						<h3 className={cx('popup-title')}>Themes setting</h3>
+						<ChangeColor />
+					</div>
+				</div>
+			</OutsideClickHandler>
+		)
+	}
+
 	return (
 		<header className={cx('header')}>
 			<div className={cx('wrap-head', { 'sticky-header': scroll && !breakpoint.mobile })}>
 				<div className="container">
 					<nav className={cx('navbar')}>
+						{!breakpoint.tablet && <ToggleThemes />}
 						{!breakpoint.tablet && renderNavbar()}
+						{!breakpoint.tablet && renderSettingColor()}
 						{breakpoint.tablet && (
 							<React.Fragment>
 								<button className={cx('toggle-sidebar')} onClick={() => setVisible(true)}>
