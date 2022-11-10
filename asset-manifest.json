@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9f7d7990.css",
-    "main.js": "/portfolio/static/js/main.a9ad785c.js",
+    "main.css": "/portfolio/static/css/main.a3569c4d.css",
+    "main.js": "/portfolio/static/js/main.ecc13174.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/avt-gavin.png": "/portfolio/static/media/avt-gavin.e511d34b02ec31dd30d0.png",
     "static/media/contact1.png": "/portfolio/static/media/contact1.8ddfbfd11798f881db54.png",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.9f7d7990.css",
-    "static/js/main.a9ad785c.js"
+    "static/css/main.a3569c4d.css",
+    "static/js/main.ecc13174.js"
   ]
 }
