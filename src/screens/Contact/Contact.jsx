@@ -10,6 +10,7 @@ import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import emailjs from '@emailjs/browser'
 import { Link } from 'react-router-dom'
+import { BsTelephoneFill } from 'react-icons/bs'
 
 const cx = classNames.bind(styles)
 
@@ -24,7 +25,6 @@ const schema = yup
 	.required()
 
 const Contact = () => {
-
 	const formRef = useRef()
 
 	const {
@@ -61,9 +61,11 @@ const Contact = () => {
 	return (
 		<div className={cx('contact')}>
 			<div className={cx('container', 'section')}>
-				<div className={cx('intro')}>
-					<p>contact</p>
-					<h4>Send me an email</h4>
+				<div className="section-heading">
+					<p className="heading-meta">
+						<BsTelephoneFill /> contact
+					</p>
+					<h2 className="title-meta">Send me an email</h2>
 				</div>
 				<div className={cx('wrapper')}>
 					<div className={cx('contact-intro')} data-aos="fade-right">

@@ -1,4 +1,13 @@
 @import '../../styles/helper';
-.about{
-    min-height: 100vh;
+
+.wrapper{
+    padding: 30px 0;
+}
+
+.content{
+    text-align: justify;
+    font-weight: 300;
+    span{
+        font-weight: 700;
+    }
 }

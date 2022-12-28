@@ -25,10 +25,10 @@ const dataScreen = [
 		id: 'about',
 		component: <AboutMe />,
 	},
-	{
-		id: 'services',
-		component: <Services />,
-	},
+	// {
+	// 	id: 'services',
+	// 	component: <Services />,
+	// },
 	{
 		id: 'skills',
 		component: <Skills />,
@@ -41,10 +41,10 @@ const dataScreen = [
 		id: 'experience',
 		component: <Experience />,
 	},
-	{
-		id: 'blog',
-		component: <Blog />,
-	},
+	// {
+	// 	id: 'blog',
+	// 	component: <Blog />,
+	// },
 	{
 		id: 'contact',
 		component: <Contact />,
@@ -52,8 +52,7 @@ const dataScreen = [
 ]
 
 function App() {
-
-	const breakpoint = useContext(MediaQueryContext);
+	const breakpoint = useContext(MediaQueryContext)
 
 	const darkmode = JSON.parse(localStorage.getItem('dark-mode-enabled')) ? true : false
 	if (darkmode) {
@@ -69,7 +68,7 @@ function App() {
 		dispatch(ThemeAction.setColor(colorClass))
 	}, [dispatch])
 
-	useEffect(() => {	
+	useEffect(() => {
 		window.document.body.ariaCurrent = themeReducer.color
 	}, [themeReducer, dispatch])
 
@@ -85,7 +84,7 @@ function App() {
 							element={
 								<DefaultLayout>
 									{dataScreen.map((child, id) => (
-										<Section key={id} id={child.id} className='section-screen'>
+										<Section key={id} id={child.id} className="section-screen">
 											{child.component}
 										</Section>
 									))}

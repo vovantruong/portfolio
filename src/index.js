@@ -10,6 +10,7 @@ import GlobalStyle from './styles/GlobalStyles'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './services'
+import CursorCustom from './components/CursorCustom/CursorCustom'
 
 AOS.init({
 	duration: 600,
@@ -26,6 +27,7 @@ root.render(
 			<MediaProvider>
 				<GlobalStyle>
 					<App />
+					<CursorCustom/>
 				</GlobalStyle>
 			</MediaProvider>
 		</Provider>

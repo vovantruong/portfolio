@@ -30,11 +30,11 @@ const dataItem = [
 		name: 'About',
 		icon: <FaUserFriends />,
 	},
-	{
-		id: 'services',
-		name: 'Services',
-		icon: <AiOutlineFundProjectionScreen />,
-	},
+	// {
+	// 	id: 'services',
+	// 	name: 'Services',
+	// 	icon: <AiOutlineFundProjectionScreen />,
+	// },
 	{
 		id: 'skills',
 		name: 'Skills',
@@ -49,11 +49,6 @@ const dataItem = [
 		id: 'experience',
 		name: 'Experience',
 		icon: <GiSoapExperiment />,
-	},
-	{
-		id: 'blog',
-		name: 'Blog',
-		icon: <ImBlog />,
 	},
 	{
 		id: 'contact',
@@ -126,8 +121,9 @@ const Header = () => {
 			<div className={cx('wrap-head', { 'sticky-header': scroll && !breakpoint.mobile })}>
 				<div className="container">
 					<nav className={cx('navbar')}>
-						{!breakpoint.tablet && <ToggleThemes />}
+						<div className={cx('head__brand')}>GAVIN</div>
 						{!breakpoint.tablet && renderNavbar()}
+						{!breakpoint.tablet && <ToggleThemes />}
 						{!breakpoint.tablet && renderSettingColor()}
 						{breakpoint.tablet && (
 							<React.Fragment>
