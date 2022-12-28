@@ -12,9 +12,9 @@ const ToggleThemes = ({ className }) => {
 
 	return (
 		<div className={cx('toggle-theme', className)}>
-			<button onClick={() => setDarkMode(!darkMode)} className={cx('btn-change')}>
+			<div onClick={() => setDarkMode(!darkMode)} className={cx('btn-change')}>
 				{darkMode ? <IoMdMoon /> : <HiSun />}
-			</button>
+			</div>
 		</div>
 	)
 }

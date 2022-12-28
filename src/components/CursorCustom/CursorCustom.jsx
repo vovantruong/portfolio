@@ -8,7 +8,7 @@ const cx = classNames.bind(styles)
 const CursorCustom = () => {
 	return (
 		<AnimatedCursor
-			innerSize={8}
+			innerSize={12}
 			outerSize={50}
 			outerAlpha={0}
 			innerScale={1}
