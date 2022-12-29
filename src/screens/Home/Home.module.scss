@@ -20,7 +20,7 @@
 	}
 
 	@include mobile {
-		margin-top: 50px;
+		margin-top: 100px;
 	}
 }
 
@@ -294,14 +294,20 @@
 
 	@include dark{
 		border-color: var(--text-dark);
+		&::before{
+			background: var(--text-dark);
+		}
 	}
 
 	@keyframes  scroll__btn{
 		0%{
 			top: 3px;
 		}
-		30%{
+		50%{
 			top: 10px;
+		}
+		100%{
+			top: 3px;
 		}
 		
 	}
