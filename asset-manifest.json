@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.185185ed.css",
-    "main.js": "/portfolio/static/js/main.d0156cb5.js",
+    "main.css": "/portfolio/static/css/main.c883d5c1.css",
+    "main.js": "/portfolio/static/js/main.54bd02d2.js",
     "static/js/27.2163fce8.chunk.js": "/portfolio/static/js/27.2163fce8.chunk.js",
     "static/media/avt-gavin.png": "/portfolio/static/media/avt-gavin.e511d34b02ec31dd30d0.png",
+    "static/media/question-mark.jpg": "/portfolio/static/media/question-mark.6e9cec667553c443a916.jpg",
     "static/media/contact1.png": "/portfolio/static/media/contact1.8ddfbfd11798f881db54.png",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/css/main.185185ed.css",
-    "static/js/main.d0156cb5.js"
+    "static/css/main.c883d5c1.css",
+    "static/js/main.54bd02d2.js"
   ]
 }
