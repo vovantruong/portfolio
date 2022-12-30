@@ -16,6 +16,14 @@ const Skills = () => {
 						</p>
 						<h2 className="title-meta">MY SKILLS</h2>
 					</div>
+					<div className={cx('section-content')}>
+						<span></span>
+					</div>
+					<div className={cx('section-skills')}>
+						<div className={cx('skill-item')}>
+
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

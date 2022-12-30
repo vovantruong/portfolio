@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import classNames from 'classnames/bind'
 import styles from './Home.module.scss'
-import UserImage from '../../assets/image/avt-gavin.png'
 import ReactTypingEffect from 'react-typing-effect'
 import { ImDownload3 } from 'react-icons/im'
 import { FaRegPaperPlane } from 'react-icons/fa'
 import { HiArrowDown } from 'react-icons/hi'
+import { GoGlobe } from 'react-icons/go'
 
 const cx = classNames.bind(styles)
 
@@ -39,6 +39,7 @@ const Home = () => {
 
 	return (
 		<div className={cx('home')}>
+			<GoGlobe className={cx('bg-global')} />
 			<div className="container">
 				<div className={cx('wrapper')}>
 					<div className={cx('intro')} data-aos="fade-right">

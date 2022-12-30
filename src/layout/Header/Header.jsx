@@ -16,6 +16,7 @@ import ToggleThemes from '~/components/ToggleThemes/ToggleThemes'
 import OutsideClickHandler from 'react-outside-click-handler'
 import { IoSettingsOutline } from 'react-icons/io5'
 import ChangeColor from '~/components/ChangeColor/ChangeColor'
+import { Link } from 'react-router-dom'
 
 const cx = classNames.bind(styles)
 
@@ -118,10 +119,10 @@ const Header = () => {
 
 	return (
 		<header className={cx('header')}>
-			<div className={cx('wrap-head', { 'sticky-header': scroll && !breakpoint.mobile })}>
+			<div className={cx('wrap-head', { 'sticky-header': scroll })}>
 				<div className="container">
 					<nav className={cx('navbar')}>
-						<div className={cx('head__brand')}>GAVIN</div>
+						<Link to="/" className={cx('head__brand')}>GAVIN</Link>
 						{!breakpoint.tablet && renderNavbar()}
 						{!breakpoint.tablet && <ToggleThemes />}
 						{!breakpoint.tablet && renderSettingColor()}
