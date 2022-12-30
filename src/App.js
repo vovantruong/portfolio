@@ -12,7 +12,6 @@ import Services from './screens/Services/Services'
 import Skills from './screens/Skills/Skills'
 import Blog from './screens/Blog/Blog'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
-import { MediaQueryContext } from './context/MediaQueryContext'
 import Education from './screens/Education/Education'
 import Experience from './screens/Experience/Experience'
 
@@ -52,7 +51,6 @@ const dataScreen = [
 ]
 
 function App() {
-	const breakpoint = useContext(MediaQueryContext)
 
 	const darkmode = JSON.parse(localStorage.getItem('dark-mode-enabled')) ? true : false
 	if (darkmode) {

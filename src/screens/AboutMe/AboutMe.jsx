@@ -1,12 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import classNames from 'classnames/bind'
 import styles from './AboutMe.module.scss'
 import { FaBirthdayCake, FaQuoteLeft, FaRegCalendarAlt, FaUserFriends, FaUserGraduate } from 'react-icons/fa'
 import { GiModernCity } from 'react-icons/gi'
+import { MediaQueryContext } from '../../context/MediaQueryContext'
 
 const cx = classNames.bind(styles)
 
 const AboutMe = () => {
+	const breakpoint = useContext(MediaQueryContext)
+
 	return (
 		<div className={cx('about-area')}>
 			<div className="container">
@@ -19,7 +22,13 @@ const AboutMe = () => {
 					</div>
 					<div className={cx('section-body')}>
 						<div className={cx('box-item', 'about__img')}>
-							<img src={require('../../assets/image/question-mark.jpg')} alt="..." />
+							<div className={cx('wrap-img')}>
+								{breakpoint.tablet ? (
+									<img src={require('../../assets/image/question-mark-mb.jpg')} alt="..." />
+								) : (
+									<img src={require('../../assets/image/question-mark.jpg')} alt="..." />
+								)}
+							</div>
 						</div>
 						<div className={cx('box-item', 'about__content')}>
 							<div className={cx('about-desc')}>
@@ -39,34 +48,34 @@ const AboutMe = () => {
 								</p>
 							</div>
 							<div className={cx('person-infor')}>
-								<p className={cx('infor-item')}>
+								<div className={cx('infor-item')}>
 									<div className={cx('icon')}>
 										<FaRegCalendarAlt />
 									</div>
 									<span>Birthday:</span>
 									July 10, 2001
-								</p>
-								<p className={cx('infor-item')}>
+								</div>
+								<div className={cx('infor-item')}>
 									<div className={cx('icon')}>
 										<FaBirthdayCake />
 									</div>
 									<span>Age:</span>
 									{new Date().getFullYear() - 2001}
-								</p>
-								<p className={cx('infor-item')}>
+								</div>
+								<div className={cx('infor-item')}>
 									<div className={cx('icon')}>
 										<FaUserGraduate />
 									</div>
 									<span>Level:</span>
 									Fresher Dev
-								</p>
-								<p className={cx('infor-item')}>
+								</div>
+								<div className={cx('infor-item')}>
 									<div className={cx('icon')}>
 										<GiModernCity />
 									</div>
 									<span>City:</span>
 									HCM, Viet Nam
-								</p>
+								</div>
 							</div>
 						</div>
 					</div>
