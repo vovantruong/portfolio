@@ -1,3 +1,18 @@
-// .skills{
-//     min-height: 100vh;
-// }
+@import '../../styles/app';
+
+.section-skill{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: -10px;
+
+    @include mobile{
+        margin: 0;
+    }
+}
+
+.skill-item{
+    width: 25%;
+    padding: 10px;
+}

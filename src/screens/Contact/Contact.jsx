@@ -68,7 +68,7 @@ const Contact = () => {
 					<h2 className="title-meta">Send me an email</h2>
 				</div>
 				<div className={cx('wrapper')}>
-					<div className={cx('contact-intro')} data-aos="fade-right">
+					<div className={cx('contact-intro')} data-aos="fade-up">
 						<div className={cx('card-intro')}>
 							<div className={cx('card-img')}>
 								<img src={ImgCardContact} alt="..." />
@@ -113,7 +113,7 @@ const Contact = () => {
 							</div>
 						</div>
 					</div>
-					<div className={cx('contact-form')} data-aos="fade-left">
+					<div className={cx('contact-form')} data-aos="fade-up" data-aos-delay="300">
 						<form ref={formRef} className={cx('form')} onSubmit={handleSubmit(onSubmit)} autoComplete="off">
 							<div className={cx('form__group')}>
 								<InputField
