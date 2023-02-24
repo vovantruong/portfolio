@@ -32,14 +32,14 @@ const dataScreen = [
 		id: 'skills',
 		component: <Skills />,
 	},
-	{
-		id: 'education',
-		component: <Education />,
-	},
-	{
-		id: 'experience',
-		component: <Experience />,
-	},
+	// {
+	// 	id: 'education',
+	// 	component: <Education />,
+	// },
+	// {
+	// 	id: 'experience',
+	// 	component: <Experience />,
+	// },
 	// {
 	// 	id: 'blog',
 	// 	component: <Blog />,

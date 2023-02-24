@@ -27,7 +27,7 @@ root.render(
 			<MediaProvider>
 				<GlobalStyle>
 					<App />
-					<CursorCustom/>
+					{/* <CursorCustom/> */}
 				</GlobalStyle>
 			</MediaProvider>
 		</Provider>

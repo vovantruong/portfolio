@@ -41,16 +41,16 @@ const dataItem = [
 		name: 'Skills',
 		icon: <FaLightbulb />,
 	},
-	{
-		id: 'education',
-		name: 'Education',
-		icon: <MdOutlineCastForEducation />,
-	},
-	{
-		id: 'experience',
-		name: 'Experience',
-		icon: <GiSoapExperiment />,
-	},
+	// {
+	// 	id: 'education',
+	// 	name: 'Education',
+	// 	icon: <MdOutlineCastForEducation />,
+	// },
+	// {
+	// 	id: 'experience',
+	// 	name: 'Experience',
+	// 	icon: <GiSoapExperiment />,
+	// },
 	{
 		id: 'contact',
 		name: 'Contact',
