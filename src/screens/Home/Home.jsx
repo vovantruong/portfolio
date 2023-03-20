@@ -6,23 +6,30 @@ import { ImDownload3 } from 'react-icons/im'
 import { FaRegPaperPlane } from 'react-icons/fa'
 import { HiArrowDown } from 'react-icons/hi'
 import { GoGlobe } from 'react-icons/go'
+import FileSaver from 'file-saver'
 
 const cx = classNames.bind(styles)
 
 const Home = () => {
 	const handleDownloadCv = () => {
 		// using Java Script method to get PDF file
-		fetch('../../assets/file/CV-VoVanTruong.pdf').then((response) => {
-			response.blob().then((blob) => {
-				// Creating new object of PDF file
-				const fileURL = window.URL.createObjectURL(blob)
-				// Setting various property values
-				let alink = document.createElement('a')
-				alink.href = fileURL
-				alink.download = 'CV-VoVanTruong.pdf'
-				alink.click()
-			})
-		})
+		// fetch('../../assets/file/CV-VoVanTruong.pdf').then((response) => {
+		// 	response.blob().then((blob) => {
+		// 		// Creating new object of PDF file
+		// 		const fileURL = window.URL.createObjectURL(blob)
+		// 		// Setting various property values
+		// 		let alink = document.createElement('a')
+		// 		alink.href = fileURL
+		// 		alink.download = 'CV-VoVanTruong.pdf'
+		// 		alink.click()
+		// 	})
+		// })
+		// Tạo một liên kết tải xuống trực tiếp
+		FileSaver.saveAs(
+			`${process.env.PUBLIC_URL}/file/CV-VoVanTruong.pdf`,
+			'CV-VoVanTruong.pdf'
+		);
+
 	}
 
 	const scrollMouseRef = useRef()
