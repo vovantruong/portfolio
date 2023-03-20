@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.fcf2f146.css",
-    "main.js": "./static/js/main.2a05f6a6.js",
+    "main.css": "./static/css/main.c6603dbf.css",
+    "main.js": "./static/js/main.4cac460b.js",
     "static/js/27.2163fce8.chunk.js": "./static/js/27.2163fce8.chunk.js",
     "static/media/avt-gavin.png": "./static/media/avt-gavin.e511d34b02ec31dd30d0.png",
     "static/media/question-mark-mb.jpg": "./static/media/question-mark-mb.6e9cec667553c443a916.jpg",
@@ -10,7 +10,7 @@
     "index.html": "./index.html"
   },
   "entrypoints": [
-    "static/css/main.fcf2f146.css",
-    "static/js/main.2a05f6a6.js"
+    "static/css/main.c6603dbf.css",
+    "static/js/main.4cac460b.js"
   ]
 }
