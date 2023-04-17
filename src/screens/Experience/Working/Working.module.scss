@@ -1,0 +1,123 @@
+@import '../../../styles/app';
+
+.working {
+	position: relative;
+	padding: 30px 20px 30px 45px;
+	border-left: 3px solid var(--bg-dark);
+
+	@include dark {
+		border-color: var(--bg-light);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: -2px;
+		left: -11px;
+		width: 20px;
+		height: 20px;
+		background: var(--color-main);
+		transform: rotateZ(45deg);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -2px;
+		left: -11px;
+		width: 0;
+		height: 0;
+		width: 20px;
+		height: 20px;
+		background: var(--color-main);
+		transform: rotateZ(45deg);
+	}
+}
+
+.work-title {
+	font-family: var(--font-edu);
+	position: relative;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+
+	@include mobile {
+		font-size: 20px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: -57px;
+		width: 20px;
+		border-radius: 50%;
+		height: 20px;
+		transform: translate(0%, -50%);
+		background: var(--color-main);
+		box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: -44px;
+		width: 35px;
+		height: 3px;
+		transform: translate(0%, -50%);
+		background: var(--bg-dark);
+		z-index: -1;
+		@include dark {
+			background: var(--bg-light);
+		}
+	}
+}
+
+.work-prj {
+	margin: 10px 0;
+	font-family: var(--font-edu);
+
+	&__title {
+		position: relative;
+		font-weight: 800;
+		line-height: 1.5;
+		font-size: 26px;
+		color: var(--text-light-2);
+
+		@include mobile {
+			font-size: 18px;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: -51px;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			transform: translate(0%, -50%);
+			background: var(--color-main);
+			box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.1);
+		}
+	}
+
+	&__desc {
+		font-size: 24px;
+		font-weight: 600;
+		margin-bottom: 20px;
+		color: var(--text-light-3);
+
+		@include mobile {
+			font-size: 16px;
+		}
+
+		@include dark {
+			color: var(--text-dark-2);
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

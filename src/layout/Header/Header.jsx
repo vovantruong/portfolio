@@ -46,11 +46,11 @@ const dataItem = [
 	// 	name: 'Education',
 	// 	icon: <MdOutlineCastForEducation />,
 	// },
-	// {
-	// 	id: 'experience',
-	// 	name: 'Experience',
-	// 	icon: <GiSoapExperiment />,
-	// },
+	{
+		id: 'experience',
+		name: 'Experience',
+		icon: <GiSoapExperiment />,
+	},
 	{
 		id: 'contact',
 		name: 'Contact',

@@ -21,8 +21,7 @@ export const dataSkills = [
     },
     {
         id: 5,
-        name: "Wordpress",
-        level: "55",
+        name: "Bootstrap",
+        level: "75",
     },
-
 ]

@@ -36,10 +36,10 @@ const dataScreen = [
 	// 	id: 'education',
 	// 	component: <Education />,
 	// },
-	// {
-	// 	id: 'experience',
-	// 	component: <Experience />,
-	// },
+	{
+		id: 'experience',
+		component: <Experience />,
+	},
 	// {
 	// 	id: 'blog',
 	// 	component: <Blog />,
